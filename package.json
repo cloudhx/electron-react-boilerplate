@@ -82,7 +82,7 @@
     ],
     "publish": {
       "provider": "github",
-      "owner": "electron-react-boilerplate",
+      "owner": "cloudhx",
       "repo": "electron-react-boilerplate"
     }
   },
