@@ -17,7 +17,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Check workspace
-        run: echo ${{ GITHUB_WORKSPACE }} && pwd
+        run: echo ${{ env.GITHUB_WORKSPACE }} && pwd
         
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
