@@ -33,9 +33,9 @@ jobs:
           echo test, and deploy your project.
       - name: Change dir
         run: pwd
-        working-directory: erb
+        working-directory: ./erb
       - name: Check pwd
         run: pwd
-        working-directory: erb
+        working-directory: ./erb
       - name: Check pwd
         run: pwd
