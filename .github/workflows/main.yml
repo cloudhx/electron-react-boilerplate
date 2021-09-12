@@ -6,6 +6,9 @@ name: CI
 on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  
+env:
+  PACKAGE_DIR: ".erb"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -13,9 +16,6 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: .erb
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -35,9 +35,9 @@ jobs:
           echo test, and deploy your project.
       - name: Change dir
         run: pwd
-        working-directory: .erb
+        working-directory: ${{ env.PACKAGE_DIR }}
       - name: Check pwd
         run: pwd
-        working-directory: .erb
+        working-directory: ${{ env.PACKAGE_DIR }}
       - name: Check pwd
         run: pwd
